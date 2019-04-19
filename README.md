@@ -1,5 +1,3 @@
-# 视频结构化平台
-
 ## 技术选型
 
 基于`creact-react-app` 构建项目, 目前架构已经支持懒加载， 皮肤切换， 语言切换，`dll`包构建，暂时不支持多入口多路由打包模式, 如果后续有技术要求，再实现此方案。
@@ -33,19 +31,9 @@
 # 检查本地仓库地址
 npm get register
 
-# 切换滤镜地址
-npm config set registry http://192.168.2.4:4873/
-
 # 安装依赖
 npm i --verbose
 
-```
-
- 如果安装失败或者运行失败, 删除`node-modules`包 ，将`npm` 地址指向淘宝`npm config set registry http://registry.npm.taobao.org`, 进入`package.json`文件夹，屏蔽`@seemmo/map` 依赖, 执行`npm i `,
-
-安装完成, 再切换滤镜地址，然后再单独安装`@seemmo/map` 包。
-
-```
 # 启动项目
 npm start
 
