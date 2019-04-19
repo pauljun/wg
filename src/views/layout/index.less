@@ -1,0 +1,49 @@
+@import "../../assets/styles/vars.less";
+
+.layout{
+    .setFlex(left, left, column);
+    height: 100%;
+    .ant-layout-header{
+        height: 60px;
+        line-height: 60px;
+        padding: 0;
+        background: url(../../assets/images/menu_bg.png) no-repeat;
+        background-size: contain;
+        .setFlex();
+        .logo{
+            width: 160px;
+            text-align: center;
+        }
+        .ant-menu{
+            background: none;
+            height: 60px;
+            line-height: 60px;
+            .flexNum(1);
+        }
+        .local-model{
+            width: 200px;
+            .ant-select-selection{
+                background: none;
+                color: @s-fff;
+                .anticon{
+                    color: @s-fff;
+                }
+            }
+        }
+        .user-base{
+            width: 100px;
+            color: @s-fff;
+            text-align: center;
+        }
+    }
+    .ant-layout-content{
+        .flexNum(1);
+    }
+}
+
+.layout-spin{
+    height: 100%;
+    .ant-spin-container{
+        height: 100%;
+    }
+}

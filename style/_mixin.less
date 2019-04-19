@@ -1,0 +1,76 @@
+/**
+ * less函数库
+ * less本身已经支持打包自动兼容, 出于后续优化考虑, 此处保留全兼容写法
+ */
+// 设置弹性盒(align-items:center,justify-content:center,flex-direction:row)
+.setFlex(@x:center,@y:center,@direction:row){
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flexbox;
+    align-items: @x;
+    -webkit-align-items: @x;
+    justify-content: @y;
+    -webkit-justify-content: @y;
+    flex-direction:@direction;
+    -webkit-flex-direction:@direction;
+}
+// 弹性盒占比
+.flexWrap(@wrap:wrap){
+    flex-wrap:@wrap;
+    -webkit-flex-wrap:@wrap;
+}
+// 弹性盒占比
+.flexNum(@num:1){
+    flex:@num;
+    -webkit-flex:@num;
+    -moz-flex:@num;
+    -ms-flexbox:@num;
+}
+// 设置字体(font-size,color:@c-font,text-align:center)
+.setFont(@size,@color:@c-normal,@T-A:center){
+    font-size:@size;
+    color:@color;
+    text-align:@T-A;
+}
+// 省略号
+.ellip(){
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+// 设置宽高(width:100%,height:100%)
+.setWH(@width:100%,@height:100%){
+    width: @width;
+    height: @height;
+}
+// 相对定位垂直居中
+.absCenter{
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+// 绝对定位垂直居中
+.relCenter{
+    position: relative;
+    top: 50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+// 怪异盒模型
+.bdbox{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+// 设置动画效果
+.animation(@name, @duration:1s, @direction:normal) {
+    animation:@name @duration @direction;
+    -webkit-animation:@name @duration @direction;
+}
